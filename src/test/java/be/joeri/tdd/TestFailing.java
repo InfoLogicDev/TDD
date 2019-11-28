@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.fail;
 
 import org.junit.Test;
 
-public class FailingTest {
+public class TestFailing {
 	@Test
 	public void testThatFails(){
 		fail("This test is failing");
