@@ -7,4 +7,8 @@ public class FractionAddition {
 		Fraction termOneFraction = new Fraction(termOne);
 		return termOneFraction;
 	}
+
+	public Fraction addition(Fraction termOne, Fraction termTwo){
+		return termOne;
+	}
 }
