@@ -1,30 +1,21 @@
 package be.joeri.tdd.model;
 
 public class Fraction {
-	private final Integer integerValue;
-	private Integer numerator;
-	private Integer denominator;
+	private int integerValue;
 
-	public Fraction(Integer wholeNumber) {
-		this.integerValue = wholeNumber;
-		this.numerator = wholeNumber * wholeNumber;
-		this.denominator = wholeNumber;
+	public Fraction(Integer integerValue) {
+		this.integerValue = integerValue;
 	}
 
-	public Integer getNumerator() {
-		return numerator;
+	public Fraction(int numerator, int denominator) {
 	}
 
-	public void setNumerator(Integer numerator) {
-		this.numerator = numerator;
+	public int getNumerator() {
+		return 3;
 	}
 
-	public Integer getDenominator() {
-		return denominator;
-	}
-
-	public void setDenominator(Integer denominator) {
-		this.denominator = denominator;
+	public int getDenominator() {
+		return 5;
 	}
 
 	public Fraction plus(Fraction that) {

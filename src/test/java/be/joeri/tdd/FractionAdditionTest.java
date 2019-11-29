@@ -3,6 +3,7 @@ package be.joeri.tdd;
 import static org.junit.Assert.assertEquals;
 
 import be.joeri.tdd.model.Fraction;
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -34,5 +35,12 @@ public class FractionAdditionTest {
 	@Test
 	public void negativeTermsWithNegativeResult() throws Exception {
 		assertEquals(-2, new Fraction(-3).plus(new Fraction(1)).intValue());
+	}
+
+	@Test
+	public void nonTrivialDenominator() throws Exception {
+		Fraction sum = new Fraction(1,5).plus(new Fraction(2,5));
+		assertEquals(3, sum.getNumerator());
+		assertEquals(5, sum.getDenominator());
 	}
 }
