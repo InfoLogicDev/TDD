@@ -14,7 +14,6 @@ public class FractionAdditionTest {
 
 	@Test
 	public void zeroPlusZero() throws Exception {
-		assertEquals(0, new Fraction(0).plus(new Fraction(0)).intValue());
 		assertEquals(new Fraction(0,1), new Fraction(0).plus(new Fraction(0)));
 	}
 
