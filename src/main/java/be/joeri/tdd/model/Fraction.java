@@ -29,9 +29,10 @@ public class Fraction {
 
 	public Fraction plus(Fraction that) {
 		if (that.integerValue != 0) {
-			return that;
+			return new Fraction(this.integerValue + that.integerValue);
+		} else {
+			return this;
 		}
-		return this;
 	}
 
 	public int intValue() {

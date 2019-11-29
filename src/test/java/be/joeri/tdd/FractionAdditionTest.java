@@ -1,10 +1,8 @@
 package be.joeri.tdd;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 
 import be.joeri.tdd.model.Fraction;
-import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -29,5 +27,11 @@ public class FractionAdditionTest {
 	public void zeroPlusNonZero() throws Exception {
 		final Fraction sum = new Fraction(0).plus(new Fraction(5));
 		assertEquals(5, sum.intValue());
+	}
+
+	@Test
+	public void nonNegativenonZeroOperands() throws Exception {
+		final Fraction sum = new Fraction(2).plus(new Fraction(5));
+		assertEquals(7, sum.intValue());
 	}
 }
