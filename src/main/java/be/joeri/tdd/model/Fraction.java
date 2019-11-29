@@ -1,12 +1,11 @@
 package be.joeri.tdd.model;
 
 public class Fraction {
-	private final int denominator;
 	private final int numerator;
+	private final int denominator;
 
 	public Fraction(Integer integerValue) {
-		this.numerator = integerValue;
-		this.denominator = 1;
+		this(integerValue, 1);
 	}
 
 	public Fraction(int numerator, int denominator) {
