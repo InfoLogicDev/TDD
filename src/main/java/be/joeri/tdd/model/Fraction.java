@@ -1,17 +1,12 @@
 package be.joeri.tdd.model;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-
 public class Fraction {
+	private final Integer integerValue;
 	private Integer numerator;
 	private Integer denominator;
 
-	public Fraction(Integer numerator, Integer denominator) {
-		this.numerator = numerator;
-		this.denominator = denominator;
-	}
-
 	public Fraction(Integer wholeNumber) {
+		this.integerValue = wholeNumber;
 		this.numerator = wholeNumber * wholeNumber;
 		this.denominator = wholeNumber;
 	}
@@ -30,5 +25,16 @@ public class Fraction {
 
 	public void setDenominator(Integer denominator) {
 		this.denominator = denominator;
+	}
+
+	public Fraction plus(Fraction that) {
+		if (that.integerValue != 0) {
+			return that;
+		}
+		return this;
+	}
+
+	public int intValue() {
+		return integerValue;
 	}
 }
