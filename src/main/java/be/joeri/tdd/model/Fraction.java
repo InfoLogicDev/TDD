@@ -31,4 +31,9 @@ public class Fraction {
 	public String toString() {
 		return String.format("%d/%d", numerator, denominator);
 	}
+
+	@Override
+	public int hashCode() {
+		return numerator * 19 + denominator;
+	}
 }
